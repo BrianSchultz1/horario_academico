@@ -1,0 +1,21 @@
+CREATE TABLE professores (
+  id INT PRIMARY KEY,
+  nome VARCHAR(100),
+  email VARCHAR(100),
+  ano_egresso INT
+);
+
+CREATE TABLE disciplinas (
+  codigo VARCHAR(10) PRIMARY KEY,
+  nome VARCHAR(100),
+  professor_id INT,
+  FOREIGN KEY (professor_id) REFERENCES professores(id)
+);
+
+CREATE TABLE horarios (
+  disciplina_codigo VARCHAR(10),
+  dia_semana VARCHAR(20),
+  horario_inicio TIME,
+  horario_fim TIME,
+  FOREIGN KEY (disciplina_codigo) REFERENCES disciplinas(codigo)
+);

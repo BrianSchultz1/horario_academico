@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Quadro de Horário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Controle de Quadro de Horário</h1>
+
+    <h2>Cadastro de Estudante</h2>
+    <form id="estudante-form">
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" required>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="ano-egresso">Ano de Egresso:</label>
+        <input type="text" id="ano-egresso" required>
+
+        <button type="submit">Cadastrar Estudante</button>
+    </form>
+
+    <h2>Cadastro de Professor</h2>
+    <form id="professor-form">
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" required>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="ano-egresso">Ano de Egresso:</label>
+        <input type="text" id="ano-egresso" required>
+
+        <button type="submit">Cadastrar Professor</button>
+    </form>
+
+    <h2>Cadastro de Disciplina</h2>
+    <form id="disciplina-form">
+        <label for="codigo">Código da Disciplina:</label>
+        <input type="text" id="codigo" required>
+
+        <label for="nome">Nome da Disciplina:</label>
+        <input type="text" id="nome" required>
+
+        <label for="professor">Professor:</label>
+        <select id="professor" required>
+            <!-- Options for professors will be populated dynamically -->
+        </select>
+
+        <button type="submit">Cadastrar Disciplina</button>
+    </form>
+
+    <h2>Matrícula de Estudante na Disciplina</h2>
+    <form id="matricula-form">
+        <label for="disciplina">Disciplina:</label>
+        <select id="disciplina" required>
+            <!-- Options for disciplines will be populated dynamically -->
+        </select>
+
+        <label for="estudante">Estudante:</label>
+        <select id="estudante" required>
+            <!-- Options for students will be populated dynamically -->
+        </select>
+
+        <button type="submit">Matricular Estudante</button>
+    </form>
+
+    <h2>Quadro de Horário do Professor</h2>
+    <div id="quadro-horario-professor"></div>
+
+    <h2>Quadro de Horário do Estudante</h2>
+    <div id="quadro-horario-estudante"></div>
+
+    <h2>Diário da Disciplina</h2>
+    <div id="diario-disciplina"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
