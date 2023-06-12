@@ -3,11 +3,12 @@ const db = require('hsqldb');
 // Conexão com o banco de dados
 const connection = db.connect({
   type: 'mem',
-  name: 'mysdb.script',
+  name: '',
   user: 'sa',
   password: '',
-  url: 'jdbc:hsqldb:mem:mysdb.script'
+  url: 'jdbc:hsqldb:mem:'
 });
+
 
 // Criação das tabelas no banco de dados
 const createTables = () => {
